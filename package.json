@@ -1,6 +1,6 @@
 {
-  "name": "n8n-nodes-g4whatsapp",
-  "version": "1.0.0",
+  "name": "n8n-nodes-wppconnect",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,25 +17,40 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/G4Whatsapp.credentials.js"
+      "dist/credentials/WPPConnectApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/G4Whatsapp/G4Whatsapp.node.js"
+      "dist/nodes/wppconnect/WPPConnect.node.js"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GustavoDMS/n8n-nodes-g4whatsapp.git"
+    "url": "git+https://github.com/GustavoDMS/n8n-nodes-wppconnect.git"
   },
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "n8n",
+    "n8n-node",
+    "n8n-node-package",
+    "n8n-nodes",
+    "n8n-nodes-package",
+    "n8n-nodes-wppconnect",
+    "n8n-node-wppconnect",
+    "n8n-node-wppconnect-package",
+    "whatsapp",
+    "whatsapp-api",
+    "whatsapp api n8n",
+    "whatsapp-api-n8n"
   ],
-  "author": "Gustavo Doria",
+  "author": {
+    "name": "Gustavo Doria",
+    "email": "gustavodoria@outlook.com"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GustavoDMS/n8n-nodes-g4whatsapp/issues"
+    "url": "https://github.com/GustavoDMS/n8n-nodes-wppconnect/issues"
   },
-  "homepage": "https://github.com/GustavoDMS/n8n-nodes-g4whatsapp#readme",
+  "homepage": "https://github.com/GustavoDMS/n8n-nodes-wppconnect#readme",
 
   "devDependencies": {
     "@types/express": "^4.17.6",

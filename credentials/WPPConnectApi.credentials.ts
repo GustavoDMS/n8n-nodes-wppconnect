@@ -4,33 +4,38 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class G4Whatsapp implements ICredentialType {
-	name = 'g4whatsappapi';
-	displayName = 'G4 WhatsApp API';
+export class WPPConnectApi implements ICredentialType {
+	name = 'wppconnectApi';
+	displayName = 'WPPConnect WhatsApp API';
 	//documentationUrl = '<your-docs-url>';
 	properties: INodeProperties[] = [
 		{
-			displayName: 'API BASEURL',
+			displayName: 'Base Url',
 			name: 'api_url',
 			type: 'string',
 			default: 'http://127.0.0.1:3333',
 		},
 		{
-			displayName: 'INSTANCE KEY',
-			name: 'key',
+			displayName: 'Instance',
+			name: 'instance',
 			type: 'string',
 			default: 'YOUR_INSTANCE_KEY',
+		},
+		{
+			displayName: 'Token',
+			name: 'token',
+			type: 'string',
+			default: '',
 		},
 
 	];
 	authenticate = {
 		type: 'generic',
 		properties: {
-			// Can be body, header, or qs
-			qs: {
-				// Use the value from `apiKey` above
-				'key': '={{$credentials.key}}'
-			}
+			
+			header: {
+				'Authorization': 'Bearer {{$credentials.key}}',
+			},
 
 		},
 	} as IAuthenticateGeneric;
